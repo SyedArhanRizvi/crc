@@ -1,0 +1,20 @@
+.Dark-Red-theme {
+    --Primary-color: #8B0000;
+    --Secondary-color: #5C0000;
+    --button-color: #8B0000;
+    --button-hover-color: #4A0000;
+    --button-text-color: #fff;
+    --button-text-hover-color: #fff;
+    --font-family: "Outfit";
+}
+.Godrej-Green {--Primary-color:#6b8d14; --Secondary-color:#b1175a; --button-color:#6b8d14; --button-hover-color:#485f0d; --button-text-color:#fff; --button-text-hover-color:#fff; --font-family:"Outfit";}
+.Godrej-blue {--Primary-color:#29759f; --Secondary-color:#b11b5c; --button-color:#29759f; --button-hover-color:#125072; --button-text-color:#fff; --button-text-hover-color:#fff; --font-family:"Outfit";}
+.lodha-yellow {--Primary-color:#a68d2b; --Secondary-color:#5e4e0f; --button-color:#a68d2b; --button-hover-color:#786517; --button-text-color:#fff; --button-text-hover-color:#fff; --font-family:"Outfit";}
+.lnt-blue {--Primary-color:#07518c; --Secondary-color:#ffcf3c; --button-color:#1468ab; --button-hover-color:#b58d14; --button-text-color:#fff; --button-text-hover-color:#fff; --font-family:"Outfit";}
+.tvs-green {--Primary-color:#568232; --Secondary-color:#173c7c; --button-color:#568232; --button-hover-color:#3c5c50; --button-text-color:#fff; --button-text-hover-color:#fff; --font-family:"Outfit";}
+.Arihant-Orange {--Primary-color:#d7722a; --Secondary-color:#5c4994; --button-color:#d7722a; --button-hover-color:#b35d20; --button-text-color:#fff; --button-text-hover-color:#fff; --font-family:"Outfit";}
+.Blue-theme {--Primary-color:#29a9d7; --Secondary-color:#0d6b8d; --button-color:#29a9d7; --button-hover-color:#0d6b8d; --button-text-color:#fff; --button-text-hover-color:#fff; --font-family:"Outfit";}
+.Green-theme {--Primary-color:#04793d; --Secondary-color:#21b96b; --button-color:#04793d; --button-hover-color:#094e2b; --button-text-color:#fff; --button-text-hover-color:#fff; --font-family:"Outfit";}
+.Purple-theme {--Primary-color:rgb(166 85 142); --Secondary-color:rgb(120 35 135); --button-color:rgb(166 85 142); --button-hover-color:rgb(118 30 93); --button-text-color:#fff; --button-text-hover-color:#fff; --font-family:"Outfit";}
+.Orange-theme {--Primary-color:#e35e3b; --Secondary-color:#fcb81a; --button-color:#e35e3b; --button-hover-color:#fcb81a; --button-text-color:#fff; --button-text-hover-color:#fff; --font-family:"Outfit";}
+/*.one-Year-of-Rain-theme {--Primary-color:#2c5b6d; --Secondary-color:#009688; --button-color:#2c5b6d; --button-hover-color:#009688; --button-text-color:#fff; --button-text-hover-color:#fff;}*/

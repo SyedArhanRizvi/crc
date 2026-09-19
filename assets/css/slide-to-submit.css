@@ -1,0 +1,79 @@
+ 
+  .slide-submit {
+    position: relative;
+    width: 100%;
+    height: 50px; 
+    background: #fff;
+    padding: 4px;
+    border: 1px solid #DDDDDD;
+    border-radius: 50px;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(195deg, #53d161, #23b73c);
+  }
+
+  .slide-submit button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    margin: 4px;
+    width: 10%;
+    background-color: unset;
+    background:#fff; 
+    font-weight: bold;
+    color: #4dcd5b;
+    border: none;
+    padding: 1px;
+    border-radius: 2px;
+    transition: all 400ms ease-out;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 45px;
+    box-shadow: rgb(0 0 0 / 45%) 0px 0px 14px -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .slide-submit button img{
+    height: 50%;
+  }
+ 
+    .slide-submit button.submitted + label {
+      display: none;
+    }
+  .slide-submit label { 
+    z-index: 8; 
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    margin-left: 30px; 
+  }
+
+  .slide-submit label img{
+    width: 40px;
+    margin-right: 5px;
+  }
+
+ 
+  .slide-submit-text { /* Add a span for text */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    font-size: 17px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+    pointer-events: none;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+  } 
+  .slide-submit button:active {
+      cursor: grabbing;
+  }

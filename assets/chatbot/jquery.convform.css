@@ -1,0 +1,411 @@
+/* Start of WhatsApp UI Styles for ConvForm */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Consistent font */
+}
+
+body {
+    background-color: #E5DDD5; /* WhatsApp-like textured background color */
+    /* If you want an actual image:
+    background-image: url('path/to/whatsapp_background_pattern.png');
+    background-repeat: repeat;
+    */
+}
+
+#demo {
+    background-color: transparent; /* Ensure section is transparent to see body background */
+}
+
+.conv-form-wrapper {
+    background-color: transparent; /* Wrapper should be transparent */
+    box-shadow: none !important; /* Remove existing shadow on the main wrapper */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Remove the top gradient shadow from conv-form-wrapper */
+div.conv-form-wrapper:before {
+    display: none;
+}
+
+/* Messages Area */
+div.conv-form-wrapper div#messages,
+div.conv-form-wrapper div.wrapper-messages { /* Target both if used by library */
+    background-color: #FCFCFC; /* Transparent to show body background */
+    padding: 15px 10px; /* Add some padding */
+    flex-grow: 1; /* Allow messages area to take up available space */
+    overflow-y: auto; /* Enable scrolling for messages */
+    height: auto !important; /* Override fixed heights */
+    max-height: none !important; /* Override fixed heights */
+    position: static !important; /* Override absolute positioning if any */
+    box-shadow: none !important;
+    margin-bottom:0 !important;
+}
+
+/* Individual Message Bubbles */
+div.conv-form-wrapper div#messages div.message {
+    padding: 8px 12px;
+    border-radius: 7.5px;
+    font-size: 14px; /* Slightly larger, more readable */
+    line-height: 1.4;
+    max-width: 75%; /* Max width for bubbles */
+    word-wrap: break-word;
+    margin-bottom: 3px; /* Reduced margin between consecutive bubbles of same type */
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    position: relative; /* For tail positioning */
+}
+
+/* Bot Messages (Incoming - WhatsApp White) */
+div.conv-form-wrapper div#messages div.message.to {
+    background-color: #e5e3e3;
+    color: #303030; /* Darker text */
+    float: left;
+    clear: both;
+    border-top-left-radius: 0; /* Simpler tail indication */
+    /* For a more distinct tail (optional, can be complex with dynamic content): */
+    /* position: relative; */
+    /* margin-left: 10px; */ /* if using pseudo element for tail */
+}
+/* Tail for bot messages (optional advanced) */
+/* div.conv-form-wrapper div#messages div.message.to::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 10px 10px;
+    border-color: transparent transparent #FFFFFF transparent;
+    transform: rotate(0deg);
+} */
+
+
+/* User Messages (Outgoing - WhatsApp Green) */
+div.conv-form-wrapper div#messages div.message.from {
+    background-color: #a3d5ff; /* WhatsApp outgoing green */
+    color: #303030;
+    float: right;
+    clear: both;
+    border-top-right-radius: 0; /* Simpler tail indication */
+    /* For a more distinct tail (optional): */
+    /* position: relative; */
+    /* margin-right: 10px; */ /* if using pseudo element for tail */
+}
+/* Tail for user messages (optional advanced) */
+/* div.conv-form-wrapper div#messages div.message.from::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: -7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent #DCF8C6 transparent transparent;
+    transform: rotate(0deg);
+} */
+
+
+/* Space between different types of messages */
+.message.to + .message.from,
+.message.from + .message.to {
+    margin-top: 10px; /* Increased distinct spacing */
+}
+
+/* Input Area Styling */
+form.convFormDynamic {
+    background-color: #F0F0F0; /* WhatsApp input bar grey */
+    padding: 8px 10px;
+    display: flex;
+    align-items: center; /* Vertically align items in input bar */
+    border-top: 1px solid #D1D7DB;
+    width: 100%;
+    box-shadow: none; /* Remove existing shadow */
+    margin: 0; /* Remove auto margins */
+    position: relative; /* Keep it in flow unless full page chat needs it fixed */
+    /* If you want a fixed bottom bar for full-page chat: */
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; */
+}
+/* If using fixed input, adjust message padding:
+div.conv-form-wrapper div#messages {
+    padding-bottom: 70px; /* Approx height of input bar */
+/* }
+*/
+
+
+form.convFormDynamic textarea.userInputDynamic,
+form.convFormDynamic input.userInputDynamic { /* Target both input and textarea if used */
+        background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+    padding: 11px 15px;
+    flex-grow: 1;
+    margin-right: 0;
+    font-size: 15px;
+    line-height: 1.4;
+    min-height: auto;
+    outline: none;
+    box-shadow: none;
+    width: auto !important;
+    max-width: none !important;
+    float: none !important;
+}
+
+form.convFormDynamic textarea.userInputDynamic:focus,
+form.convFormDynamic input.userInputDynamic:focus {
+    border-color: #075E54; /* Dark green focus */
+}
+
+/* Send Button */
+form.convFormDynamic button.submit {
+        background-color: #052846;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    float: none !important;
+    margin: 0;
+}
+
+form.convFormDynamic button.submit:hover {
+    background-color: #075E54; /* Darker green on hover */
+}
+
+/* Add a Send Icon (requires Font Awesome or similar in your HTML if not already used by convform) */
+/* If convform doesn't add an icon, you might need JS to inject it or use a unicode char */
+/* Example with Font Awesome if you were to add it:
+form.convFormDynamic button.submit:before {
+    content: "\f1d8"; /* Font Awesome send icon */
+/*    font-family: "FontAwesome";
+/*    font-size: 20px;
+/* }
+*/
+/* If no icon library, use a simple unicode arrow or SVG */
+form.convFormDynamic button.submit:after {
+   /* content: '➤'; /* Simple arrow, adjust as needed or use SVG 
+    font-size: 18px;
+    transform: rotate(-40deg) translateY(-1px) translateX(1px); /* Position arrow better */
+}
+
+
+/* Quick Reply Options */
+div.conv-form-wrapper div.options {
+        word-wrap: normal;
+    /* white-space: nowrap; */
+    overflow-x: scroll;
+    /* position: absolute; */
+    top: 0;
+    width: 100%;
+    transform: translateY(-30px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+div.conv-form-wrapper div.options div.option {
+    background-color: #FFFFFF;
+    color: #007AFF;
+    border: 1px solid #007AFF;
+    border-radius: 4px;
+    padding: 8px 24px;
+    display: block;
+    margin: 8px 8px 0px 0px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+div.conv-form-wrapper div.options div.option:hover {
+    background-color: #E6F2FF; /* Lighter blue on hover */
+}
+div.conv-form-wrapper div.options div.option.selected {
+    background-color: #007AFF;
+    color: #FFFFFF;
+    border-color: #007AFF;
+}
+
+
+/* Hide default typing loader if it doesn't fit the style, or restyle it */
+.typing_loader{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    -webkit-animation: typing 1s linear infinite alternate;
+    -moz-animation: typing 1s linear infinite alternate;
+    -ms-animation: typing 1s linear infinite alternate;
+    animation: typing 1s linear infinite alternate;
+    position: relative;
+    left: -12px;
+    margin: 7px 15px 6px;
+}
+.to .typing_loader {
+    animation: typing-black 1s linear infinite alternate;
+}
+@-webkit-keyframes typing{
+    0%{
+        background-color: rgba(255,255,255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
+        24px 0px 0px 0px rgba(255,255,255,0.2);
+    }
+    50% {
+        background-color: rgba(255,255,255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,1),
+        24px 0px 0px 0px rgba(255,255,255,0.4);
+    }
+    100%{ background-color: rgba(255,255,255, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
+        24px 0px 0px 0px rgba(255,255,255,1);
+    }
+}
+
+@-moz-keyframes typing{
+    0%{
+        background-color: rgba(255,255,255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
+        24px 0px 0px 0px rgba(255,255,255,0.2);
+    }
+    50% {
+        background-color: rgba(255,255,255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,1),
+        24px 0px 0px 0px rgba(255,255,255,0.4);
+    }
+    100%{ background-color: rgba(255,255,255, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
+        24px 0px 0px 0px rgba(255,255,255,1);
+    }
+}
+
+@keyframes typing-black{
+    0%{
+        background-color: rgba(74, 74, 74, 1);
+        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74, 0.4),
+        24px 0px 0px 0px rgba(74, 74, 74, 0.2);
+    }
+    50% {
+        background-color: rgba(74, 74, 74, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74, 1),
+        24px 0px 0px 0px rgba(74, 74, 74,0.4);
+    }
+    100%{ background-color: rgba(74, 74, 74, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74,0.4),
+        24px 0px 0px 0px rgba(74, 74, 74,1);
+    }
+}
+@keyframes typing{
+    0%{
+        background-color: rgba(255,255,255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
+        24px 0px 0px 0px rgba(255,255,255,0.2);
+    }
+    50% {
+        background-color: rgba(255,255,255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,1),
+        24px 0px 0px 0px rgba(255,255,255,0.4);
+    }
+    100%{ background-color: rgba(255,255,255, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
+        24px 0px 0px 0px rgba(255,255,255,1);
+    }
+}
+
+
+/* Consent box - adjust to fit new UI if needed */
+.consent_box{
+    /* Example: make background match input bar or message bubbles */
+    /* background: #FFFFFF; */
+    /* border: 1px solid #DDD; */
+    /* bottom: 70px; */ /* If input bar is fixed and ~60px high */
+    font-size: 12px; /* Keep it small */
+    /* position: absolute; /* Or fixed depending on behavior */
+    /* left: 15px;
+    width: calc(100% - 30px);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); */
+    max-height: 130px;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    z-index:1;
+    width: calc(100% - 16px);
+    margin: auto;
+    font-size: 12px;
+    background: #eee;
+    padding: 15px;
+    border-radius: 8px;
+}
+.consent_box .consent_close{
+    /* background-color: #CCC; */
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* Error messages */
+form.convFormDynamic textarea.userInputDynamic + .error_mobile,
+.error_mobile {
+    /* Style to be less intrusive or fit the new theme */
+    /* color: #FF3B30; */ /* iOS error red */
+    /* background-color: #FFEBEB; */
+    /* padding: 5px; */
+    /* border-radius: 5px; */
+    /* bottom: 65px; */ /* Adjust based on input field position */
+        display: none;
+    content: "qweqwdasd";
+    position: absolute;
+    bottom: 65px;
+    left: 16px;
+    color: red;
+}
+form.convFormDynamic textarea.userInputDynamic.error + .error_mobile {
+    display:block;
+}
+
+/* Remove scrollbar visibility more broadly if desired */
+*::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+/* Ensure card and container don't interfere */
+.card.no-border {
+    border: none !important;
+    background-color: transparent; /* Make card transparent */
+    box-shadow: none;
+}
+.container.h-100 {
+    padding: 0; /* Remove padding if it constrains the chat wrapper */
+}
+
+/* End of WhatsApp UI Styles for ConvForm */
+</style>

@@ -1,0 +1,37 @@
+/* Helvetica */
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica/helveticaneue.woff2') format('woff2'), /* Modern Browsers */
+       url('../fonts/Helvetica/helveticaneue.woff') format('woff');  /* Legacy Browsers */
+  font-style: normal; 
+  font-weight:500;
+  font-display: swap;
+}
+
+/* Montserrat */
+@font-face {
+  font-family: 'MontserratRegular'; 
+  src: url('../fonts/Montserrat/MontserratRegular.woff') format('woff2'), /* Modern Browsers */
+       url('../fonts/Montserrat/MontserratRegular.woff') format('woff');  /* Legacy Browsers */
+  font-style: normal; 
+  font-weight:500;
+  font-display: swap;
+} 
+
+/* outfit */
+@font-face {
+font-family: 'OutfitRegular';
+  src: url('../fonts/Montserrat/OutfitRegular.html') format('woff2'), /* Modern Browsers */
+       url('../fonts/Montserrat/OutfitRegular.html') format('woff');  /* Legacy Browsers */
+  font-style: normal; 
+  font-weight:500;
+  font-display: swap;
+}
+@font-face {
+font-family: 'OutfitMedium';
+src: url('../fonts/Montserrat/OutfitMedium.html') format('woff2'), /* Modern Browsers */
+    url('../fonts/Montserrat/OutfitMedium.html') format('woff');  /* Legacy Browsers */
+font-style: normal; 
+font-weight:600;
+font-display: swap;
+}
