@@ -1,7 +1,7 @@
 /* =========================================================
    CONFIG
    ========================================================= */
-const LEAD_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwbeZM1QwszsxGTp0drSjE0pTeK3D6scJkzM36hLn0nbQ2QRsVQFRKfjANPs2mvZzJ-xQ/exec";
+const LEAD_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz4clQgvopdjBXp1k2UnU-lmMM0S0jkbOzHKyLTedL3KKxUkgE3k_qklhjUEKjWkUc57A/exec";
 const LEAD_TIMEOUT_MS = 15000;
 
 /* =========================================================
