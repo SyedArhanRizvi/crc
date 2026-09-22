@@ -7,11 +7,11 @@
 
   const cmsConfig = {
     projectName: "Godrej Arden Sigma 3 Greater Noida (NCR)",
-    phoneNumber: "918828108554",
-    contactNumber: "918744000006",
+    phoneNumber: "9667571967",
+    contactNumber: "9667571967",
     visibility: {"nonRera":{"whatsapp":true,"chatbot":true,"contact":true},"nriNonRera":{"whatsapp":false,"chatbot":true,"contact":false},"onRera":{"whatsapp":true,"chatbot":false,"contact":false},"nriRera":{"whatsapp":true,"chatbot":false,"contact":false}},
     chatbot: {
-      phoneNumber: "918828108554",
+      phoneNumber: "9667571967",
       message:
         "Hey There, I would like to explore further details About Godrej Arden Sigma 3 Greater Noida (NCR). Please Share Details.",
     },
